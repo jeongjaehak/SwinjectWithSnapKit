@@ -1,4 +1,5 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 let project = Project(
     name: "Entities",
@@ -10,7 +11,10 @@ let project = Project(
             bundleId: "io.tuist.SwinjectWithSnapKit",
             deploymentTargets: .iOS("17.0"),
             sources: ["Sources/**"],
-            dependencies: []
+            dependencies: [
+                .External.swinject,
+                .SDK.combine
+            ]
         )
     ]
 )

@@ -2,18 +2,18 @@ import ProjectDescription
 import ProjectDescriptionHelpers
 
 let project = Project(
-    name: "UseCases",
+    name: "UI",
     targets: [
         .target(
-            name: "UseCases",
+            name: "UI",
             destinations: .iOS,
             product: .staticFramework,
             bundleId: "io.tuist.SwinjectWithSnapKit",
             deploymentTargets: .iOS("17.0"),
             sources: ["Sources/**"],
             dependencies: [
-                .Project.entities,
-                .External.alamofire
+                .Project.controllers,
+                .External.snapKit,
             ]
         )
     ]

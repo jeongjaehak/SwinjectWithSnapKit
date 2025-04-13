@@ -18,5 +18,8 @@ let package = Package(
         // Add your own dependencies here:
         // .package(url: "https://github.com/Alamofire/Alamofire", from: "5.0.0"),
         // You can read more about dependencies here: https://docs.tuist.io/documentation/tuist/dependencies
+        .package(url: "https://github.com/Swinject/Swinject.git", exact: Version("2.9.1")),
+        .package(url: "https://github.com/SnapKit/SnapKit.git", exact: Version("5.7.1")),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", exact: Version("5.10.0"))
     ]
 )

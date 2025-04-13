@@ -1,4 +1,5 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 let project = Project(
     name: "Controllers",
@@ -11,7 +12,7 @@ let project = Project(
             deploymentTargets: .iOS("17.0"),
             sources: ["Sources/**"],
             dependencies: [
-                .project(target: "UseCases", path: "../UseCases")
+                .Project.useCases
             ]
         )
     ]
