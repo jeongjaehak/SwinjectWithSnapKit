@@ -1,0 +1,16 @@
+import ProjectDescription
+
+let project = Project(
+    name: "Entities",
+    targets: [
+        .target(
+            name: "Entities",
+            destinations: .iOS,
+            product: .staticFramework,
+            bundleId: "io.tuist.SwinjectWithSnapKit",
+            deploymentTargets: .iOS("17.0"),
+            sources: ["Sources/**"],
+            dependencies: []
+        )
+    ]
+)
