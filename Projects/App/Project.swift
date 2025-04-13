@@ -19,7 +19,9 @@ let project = Project(
             sources: ["Sources/**"],
             resources: ["Resources/**"],
             dependencies: [
-                .Project.ui
+                .Project.ui,
+                .External.swinject,
+//                .SDK.combine,
             ]
         ),
         .target(

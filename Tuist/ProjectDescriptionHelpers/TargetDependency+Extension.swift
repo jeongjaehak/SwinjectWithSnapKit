@@ -21,7 +21,7 @@ extension TargetDependency {
     // MARK: - Apple SDK
     
     public enum SDK {
-        public static let combine: TargetDependency = .sdk(name: "Combine", type: .framework, status: .required)
+//        public static let combine: TargetDependency = .sdk(name: "Combine", type: .framework, status: .required)
     }
     
     // MARK: - 외부 라이브러리

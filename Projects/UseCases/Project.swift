@@ -14,8 +14,7 @@ let project = Project(
             dependencies: [
                 .Project.entities,
                 .External.alamofire,
-                .External.swinject,
-                .SDK.combine
+//                .SDK.combine
             ]
         )
     ]

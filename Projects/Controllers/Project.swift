@@ -12,7 +12,8 @@ let project = Project(
             deploymentTargets: .iOS("17.0"),
             sources: ["Sources/**"],
             dependencies: [
-                .Project.useCases
+                .Project.useCases,
+//                .SDK.combine
             ]
         )
     ]
