@@ -15,12 +15,8 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     /// 기본 윈도우
     var window: UIWindow?
-    /// Swinject 컨테이너
-    let container: Container = {
-        let container = Container()
-        container.register(ListViewController.self) { _ in ListViewController() }
-        return container
-    }()
+    /// 디펜던시 컨테이너
+    let container = DIContainer()
     
     // MARK: - Scene 구성
     
