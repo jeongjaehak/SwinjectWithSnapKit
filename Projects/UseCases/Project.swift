@@ -13,7 +13,9 @@ let project = Project(
             sources: ["Sources/**"],
             dependencies: [
                 .Project.entities,
-                .External.alamofire
+                .External.alamofire,
+                .External.swinject,
+                .SDK.combine
             ]
         )
     ]

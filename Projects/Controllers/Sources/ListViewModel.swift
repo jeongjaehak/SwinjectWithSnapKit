@@ -64,18 +64,18 @@ extension ListViewModel {
 extension ListViewModel {
     /// 유저 정보를 가져온다.
     private func requestUsers() {
-//        GetUserInformations().execute().sink { [weak self] completion in
-//            guard let self else { return }
-//            switch completion {
-//            case .finished: // 성공
-//                break
-//            case .failure(_): // 실패 시 오류
-//                break
-//            }
-//        } receiveValue: { [weak self] userInformations in
-//            // 데이터 설정
-//            guard let self else { return }
-//            output.send(.updateList(users: userInformations))
-//        }.store(in: &cancellables)
+        GetUserInformations().execute().sink { [weak self] completion in
+            guard let self else { return }
+            switch completion {
+            case .finished: // 성공
+                break
+            case .failure(_): // 실패 시 오류
+                break
+            }
+        } receiveValue: { [weak self] userInformations in
+            // 데이터 설정
+            guard let self else { return }
+            output.send(.updateList(users: userInformations))
+        }.store(in: &cancellables)
     }
 }

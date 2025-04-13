@@ -13,8 +13,6 @@ public let server = Server()
 public enum Server {
     /// 개발 서버
     case develop
-    /// 스테이징 서버
-//    case staging
     /// 운영 서버
     case production
     
@@ -30,12 +28,10 @@ public enum Server {
 }
 
 extension Server {
-    var host: String {
+    public var host: String {
         switch self {
         case .develop:
             "https://jsonplaceholder.typicode.com"
-//        case .staging:
-//            "https://jsonplaceholder.typicode.com"
         case .production:
             "https://jsonplaceholder.typicode.com"
         }

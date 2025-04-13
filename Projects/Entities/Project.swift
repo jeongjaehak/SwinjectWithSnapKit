@@ -11,10 +11,7 @@ let project = Project(
             bundleId: "io.tuist.SwinjectWithSnapKit",
             deploymentTargets: .iOS("17.0"),
             sources: ["Sources/**"],
-            dependencies: [
-                .External.swinject,
-                .SDK.combine
-            ]
+            dependencies: []
         )
     ]
 )
