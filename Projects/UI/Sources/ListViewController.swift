@@ -38,7 +38,7 @@ public class ListViewController: UIViewController {
         
         setupUI()
         bind()
-        input.send(.requestUsers)
+        requestUsers()
     }
 }
 
@@ -49,7 +49,8 @@ extension ListViewController {
     // MARK: - Render
     
     private func setupUI() {
-        
+        view.backgroundColor = .white
+        title = "정재학의 포트폴리오"
     }
     
     // MARK: - Update
@@ -62,5 +63,10 @@ extension ListViewController {
                 break
             }
         }.store(in: &cancellables)
+    }
+    
+    /// 유저 정보 로드
+    private func requestUsers() {
+        input.send(.requestUsers)
     }
 }
